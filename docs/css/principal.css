@@ -1,0 +1,133 @@
+/* principal.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 56px;
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+
+nav {
+  background-color: #1c1c1c;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  margin-left: 30px;
+  font-size: 1.8em;
+  font-weight: 800;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.d-grid gap-2 col-6 mx-auto button {
+  background-color: #343a40;
+  color: #ffffff;
+  border-color: #343a40;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.d-grid gap-2 col-6 mx-auto button:hover {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+.user-info i {
+  margin-left: 20px;
+  margin-right: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logout-icon:hover {
+  color: #dc3545;
+}
+
+.modal-content {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+.modal-title {
+  color: #343a40;
+}
+
+.form-control {
+  border: 1px solid #343a40;
+  color: #ffffff;
+  background-color: #2b2b2b;
+}
+
+#espaciosSitio {
+  margin-top: 20px;
+}
+
+.espacio-container {
+  border: 1px solid #343a40;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #2b2b2b;
+}
+
+
+.espacio-container button {
+  margin-right: 10px;
+}
+
+
+.espacio-container button:hover {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+.nameSpace{
+  color: yellow;
+}
+
+.dispositivo-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 30px;
+  border-radius: 8px;
+}
+
+/* Estilo específico para los dispositivos de tipo Sensor */
+.dispositivo-container.sensor {
+  background-color: #e0f7fa; /* Cambia el color de fondo según tus preferencias */
+}
+
+/* Estilo específico para los dispositivos de tipo Ejecutor */
+.dispositivo-container.ejecutor {
+  background-color: #ffccbc; /* Cambia el color de fondo según tus preferencias */
+}
+
+/* Estilo para los botones de editar y eliminar */
+.dispositivo-container button {
+  margin-right: 5px;
+}
+
+#crearEspacioContainer {
+  display: none; /* Inicialmente oculto */
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#crearEspacioContainer.visible {
+  display: block; /* Visible cuando tiene la clase 'visible' */
+}
+
+#tituloEjecutor{
+  color:blueviolet  ;
+}
+#tituloSensor{
+  color:rgb(43, 171, 226)  ;
+}
