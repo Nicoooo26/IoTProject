@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>IoT</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form id="formRegistro">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="user" id="user" placeholder="Username" required="">
+                <input type="password" name="pswd" id="pswd" placeholder="Password" required="">
+                <button id="registroBtn">Sign up</button>
+                <p id="vaciosText" style="color: red; display: none;"></p>
+            </form>
+        </div>
+
+        <div class="login">
+            <form id="formLogin">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="text" name="user" id="loginUsername" placeholder="Username" required="">
+                <input type="password" name="pswd" id="loginPassword" placeholder="Password" required="">
+                <button id="loginBtn">Login</button>
+                <p id="errorText" style="color: red; display: none;"></p>
+            </form>
+        </div>
+    </div>
+    <script src="./js/loginregistro.js" type="module"></script>
+</body>
+
+</html>
