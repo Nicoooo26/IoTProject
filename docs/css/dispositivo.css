@@ -1,0 +1,106 @@
+#dispositivoDiv {
+    text-align: center;
+}
+
+#dispositivoDiv .input-wrapper {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px auto; /* Centra horizontalmente */
+    width: 50%; /* Ancho del div */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+#dispositivoDiv h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-wrapper input[type="text"] {
+    width: 50px; /* Ajusta el ancho según sea necesario */
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.input-wrapper span {
+    font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+
+#dispositivoDiv input[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#dispositivoDiv input[type="button"]:hover {
+    background-color: #45a049;
+}
+ /* Oculta el checkbox original */
+ .form-check-input {
+    display: none;
+}
+
+/* Estilo para el contenedor del switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Estilo para el slider del switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/* Estilo para el slider en estado activo */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/* Estilo para el checkbox cuando está marcado */
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+/* Estilo para el botón deslizante cuando el checkbox está marcado */
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+#estadoText {
+    color: black;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+}
+
