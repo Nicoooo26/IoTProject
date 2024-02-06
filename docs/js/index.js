@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 })
 
 // Evento para crear un nuevo espacio
-formEspacio['crearEspacio'].addEventListener('click',  (e) => {
+formEspacio['crearEspacio'].addEventListener('click', (e) => {
     e.preventDefault()
     // Validar si el nombre del espacio está vacío
     if (formEspacio['nombreEspacio'].value === '') {
@@ -52,7 +52,7 @@ formEspacio['crearEspacio'].addEventListener('click',  (e) => {
     } else {
         try {
             // Guardar nuevo espacio en la base de datos
-             saveEspacio({
+            saveEspacio({
                 idUser: idUsuario,
                 nameSpace: formEspacio['nombreEspacio'].value
             })
@@ -129,10 +129,14 @@ const espaciosGenerador = (espaciosSnapshot) => {
                     </svg></button>
                     </div>
                     <p>${dispositivo.id}</p>
-                    <p>${dispositivo.data().medida}</p>
+                    <p>${dispositivo.data().medida} ${dispositivo.data().unidad}</p>
                     <button class="btn btn-outline-danger eliminarDispositivo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                     <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
                     </svg></button>
+                    <button class=" btn btn-outline-success PaginaNueva"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                  </svg></button>
                     `
                 } else if (dispositivo.data().tipo === 'Ejecutor') {
                     const estado = dispositivo.data().estado
@@ -151,6 +155,10 @@ const espaciosGenerador = (espaciosSnapshot) => {
                         <button class="btn btn-outline-danger eliminarDispositivo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                         <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
                         </svg></button>
+                        <button class="btn btn-outline-success PaginaNueva"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                        <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                      </svg></button>
                     `
                 }
                 //Añadir dispositivos al div para dispositivos
@@ -177,6 +185,10 @@ const espaciosGenerador = (espaciosSnapshot) => {
                 //Evento click para eliminar el dispositivo
                 const btnEliminarDispositivo = divDispositivo.querySelector('.eliminarDispositivo')
                 btnEliminarDispositivo.addEventListener('click', () => eliminarDispositivo(idDispositivo))
+
+                //Evento click para cambiar de aplicación.
+                const btnPaginaNueva = divDispositivo.querySelector('.PaginaNueva')
+                btnPaginaNueva.addEventListener('click',()=>reubicacionWeb(idDispositivo))
             })
         })
         //Evento click para pasar el id al formulario
@@ -319,7 +331,8 @@ const guardarSensor = (id) => {
     try {
         saveDispositivo({
             idEspacio: id,
-            medida: formSensor['tamanoSensor'].value,
+            medida:'-',
+            unidad: formSensor['tamanoSensor'].value,
             name: formSensor['nombreSensor'].value,
             tipo: 'Sensor'
         })
@@ -345,4 +358,10 @@ const cambiarEstadoDispositivo = (idDispositivo, nuevoEstado) => {
 const obtenerFechaActual = () => {
     const fechaActual = new Date()
     return fechaActual.toUTCString()
+}
+
+const reubicacionWeb = (id) => { 
+    const baseURL = window.location.origin
+    const url = baseURL+'/vista/dispositivosIOT.html?id='+id
+    window.open(url,'_blank')
 }
