@@ -361,7 +361,7 @@ const obtenerFechaActual = () => {
 }
 
 const reubicacionWeb = (id) => { 
-    const baseURL = window.location.origin
-    const url = baseURL+'/IoTProject/vista/dispositivosIOT.html?id='+id
+    const baseURL = 'https://nicoooo26.github.io/dispositivosIOT'
+    const url = baseURL+'/index.html?id='+id
     window.open(url,'_blank')
 }
