@@ -10,7 +10,6 @@ import {
   addDoc,
   deleteDoc,
   doc,
-  getDoc,
   updateDoc,
   query,
   where
@@ -52,4 +51,3 @@ export const saveDispositivo = (objeto) => addDoc(collection(db, 'Dispositivos')
 export const getDispositivos = (idEspacio, callback) => onSnapshot(query(collection(db, 'Dispositivos'), where('idEspacio', '==', idEspacio)), callback)
 export const deleteDispositivo = (id) => deleteDoc(doc(db, 'Dispositivos', id))
 export const updateDispositivo = (id, objeto) => updateDoc(doc(db, 'Dispositivos', id), objeto)
-export const getDispositivo = (idDispositivo, callBack) => onSnapshot(doc(db,'Dispositivos', idDispositivo),callBack)
