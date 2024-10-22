@@ -8,7 +8,6 @@ Este proyecto es una plataforma web para la gestión de dispositivos y sensores 
 - **Gestión de espacios**: Crea espacios donde puedes gestionar tus dispositivos y sensores IoT.
 - **Sensores dinámicos**: Los sensores registran automáticamente la fecha exacta cuando detectan un cambio.
 - **Modificación de dispositivos**: Los dispositivos y sensores añadidos pueden ser modificados en cualquier momento.
-- **Diseño responsivo**: Adaptado para distintos dispositivos y tamaños de pantalla.
 
 ## Tecnologías Utilizadas
 
